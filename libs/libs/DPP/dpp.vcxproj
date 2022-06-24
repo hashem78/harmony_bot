@@ -1,0 +1,1148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C0676AE5-60E0-38B4-A1DE-34C18AB1B46D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>dpp</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\development\cpp\harmony\libs\libs\DPP\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dpp.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dpp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\development\cpp\harmony\libs\libs\DPP\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dpp.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dpp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\development\cpp\harmony\libs\libs\DPP\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">dpp.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">dpp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\development\cpp\harmony\libs\libs\DPP\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">dpp.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">dpp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\development\cpp\harmony\libs\DPP\win32\include;C:\development\cpp\harmony\libs\DPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/development/cpp/harmony/libs/libs/DPP/dpp.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SDLCheck>true</SDLCheck>
+      <UseFullPaths>false</UseFullPaths>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;FD_SETSIZE=1024;DPP_BUILD;DPP_OS=Windows;OPENSSL_SYS_WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;HAVE_VOICE;CMAKE_INTDIR="Debug";dpp_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;FD_SETSIZE=1024;DPP_BUILD;DPP_OS=Windows;OPENSSL_SYS_WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;HAVE_VOICE;CMAKE_INTDIR=\"Debug\";dpp_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\development\cpp\harmony\libs\DPP\win32\include;C:\development\cpp\harmony\libs\DPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\development\cpp\harmony\libs\DPP\win32\include;C:\development\cpp\harmony\libs\DPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/development/cpp/harmony/libs/libs/DPP/Debug/dpp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/development/cpp/harmony/libs/libs/DPP/Debug/dpp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\development\cpp\harmony\libs\DPP\win32\include;C:\development\cpp\harmony\libs\DPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/development/cpp/harmony/libs/libs/DPP/dpp.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SDLCheck>true</SDLCheck>
+      <UseFullPaths>false</UseFullPaths>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;FD_SETSIZE=1024;NDEBUG;DPP_BUILD;DPP_OS=Windows;OPENSSL_SYS_WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;HAVE_VOICE;CMAKE_INTDIR="Release";dpp_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;FD_SETSIZE=1024;NDEBUG;DPP_BUILD;DPP_OS=Windows;OPENSSL_SYS_WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;HAVE_VOICE;CMAKE_INTDIR=\"Release\";dpp_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\development\cpp\harmony\libs\DPP\win32\include;C:\development\cpp\harmony\libs\DPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\development\cpp\harmony\libs\DPP\win32\include;C:\development\cpp\harmony\libs\DPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/development/cpp/harmony/libs/libs/DPP/Release/dpp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/development/cpp/harmony/libs/libs/DPP/Release/dpp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\development\cpp\harmony\libs\DPP\win32\include;C:\development\cpp\harmony\libs\DPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/development/cpp/harmony/libs/libs/DPP/dpp.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SDLCheck>true</SDLCheck>
+      <UseFullPaths>false</UseFullPaths>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;FD_SETSIZE=1024;NDEBUG;DPP_BUILD;DPP_OS=Windows;OPENSSL_SYS_WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;HAVE_VOICE;CMAKE_INTDIR="MinSizeRel";dpp_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;FD_SETSIZE=1024;NDEBUG;DPP_BUILD;DPP_OS=Windows;OPENSSL_SYS_WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;HAVE_VOICE;CMAKE_INTDIR=\"MinSizeRel\";dpp_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\development\cpp\harmony\libs\DPP\win32\include;C:\development\cpp\harmony\libs\DPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\development\cpp\harmony\libs\DPP\win32\include;C:\development\cpp\harmony\libs\DPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/development/cpp/harmony/libs/libs/DPP/MinSizeRel/dpp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/development/cpp/harmony/libs/libs/DPP/MinSizeRel/dpp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\development\cpp\harmony\libs\DPP\win32\include;C:\development\cpp\harmony\libs\DPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/development/cpp/harmony/libs/libs/DPP/dpp.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SDLCheck>true</SDLCheck>
+      <UseFullPaths>false</UseFullPaths>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;FD_SETSIZE=1024;NDEBUG;DPP_BUILD;DPP_OS=Windows;OPENSSL_SYS_WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;HAVE_VOICE;CMAKE_INTDIR="RelWithDebInfo";dpp_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;FD_SETSIZE=1024;NDEBUG;DPP_BUILD;DPP_OS=Windows;OPENSSL_SYS_WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;HAVE_VOICE;CMAKE_INTDIR=\"RelWithDebInfo\";dpp_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\development\cpp\harmony\libs\DPP\win32\include;C:\development\cpp\harmony\libs\DPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\development\cpp\harmony\libs\DPP\win32\include;C:\development\cpp\harmony\libs\DPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libssl.lib;..\..\DPP\win32\lib\libcrypto.lib;..\..\DPP\win32\lib\zlib.lib;..\..\DPP\win32\lib\libsodium.lib;..\..\DPP\win32\lib\opus.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/development/cpp/harmony/libs/libs/DPP/RelWithDebInfo/dpp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/development/cpp/harmony/libs/libs/DPP/RelWithDebInfo/dpp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\development\cpp\harmony\libs\DPP\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/development/cpp/harmony/libs/DPP/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/development/cpp/harmony -BC:/development/cpp/harmony/libs --check-stamp-file C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckCXXSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.23\Templates\CPackConfig.cmake.in;C:\development\cpp\harmony\libs\DPP\cmake\CPackSetup.cmake;C:\development\cpp\harmony\libs\DPP\cmake\colour.cmake;C:\development\cpp\harmony\libs\DPP\win32\bin\libcrypto-1_1-x64.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\libsodium.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\libssl-1_1-x64.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\opus.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\zlib1.dll;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/development/cpp/harmony/libs/DPP/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/development/cpp/harmony -BC:/development/cpp/harmony/libs --check-stamp-file C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckCXXSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.23\Templates\CPackConfig.cmake.in;C:\development\cpp\harmony\libs\DPP\cmake\CPackSetup.cmake;C:\development\cpp\harmony\libs\DPP\cmake\colour.cmake;C:\development\cpp\harmony\libs\DPP\win32\bin\libcrypto-1_1-x64.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\libsodium.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\libssl-1_1-x64.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\opus.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\zlib1.dll;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/development/cpp/harmony/libs/DPP/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/development/cpp/harmony -BC:/development/cpp/harmony/libs --check-stamp-file C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckCXXSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.23\Templates\CPackConfig.cmake.in;C:\development\cpp\harmony\libs\DPP\cmake\CPackSetup.cmake;C:\development\cpp\harmony\libs\DPP\cmake\colour.cmake;C:\development\cpp\harmony\libs\DPP\win32\bin\libcrypto-1_1-x64.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\libsodium.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\libssl-1_1-x64.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\opus.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\zlib1.dll;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/development/cpp/harmony/libs/DPP/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/development/cpp/harmony -BC:/development/cpp/harmony/libs --check-stamp-file C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckCXXSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.23\Templates\CPackConfig.cmake.in;C:\development\cpp\harmony\libs\DPP\cmake\CPackSetup.cmake;C:\development\cpp\harmony\libs\DPP\cmake\colour.cmake;C:\development\cpp\harmony\libs\DPP\win32\bin\libcrypto-1_1-x64.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\libsodium.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\libssl-1_1-x64.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\opus.dll;C:\development\cpp\harmony\libs\DPP\win32\bin\zlib1.dll;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\dpp.dir\cmake_pch.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/dpp.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/dpp.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/dpp.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/dpp.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\application.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\auditlog.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\automod.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/automod.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\ban.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cache.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\channel.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/channel.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\appcommand.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\automod.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/cluster/automod.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\channel.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/cluster/channel.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\confirmation.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\dm.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\emoji.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/cluster/emoji.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\gateway.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\guild.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/cluster/guild.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\guild_member.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\invite.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/cluster/invite.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\json_interface.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\message.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/cluster/message.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\role.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/cluster/role.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\scheduled_event.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/cluster/scheduled_event.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\stage_instance.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/cluster/stage_instance.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\sticker.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\template.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\thread.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\timer.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\user.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/cluster/user.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\voice.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\webhook.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/cluster/webhook.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster_sync_calls.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\commandhandler.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\discordclient.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\discordevents.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\discordvoiceclient.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\dispatcher.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\dtemplate.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\emoji.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/emoji.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\etf.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\automod_rule_create.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\automod_rule_delete.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\automod_rule_execute.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\automod_rule_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\channel_create.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\channel_delete.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\channel_pins_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\channel_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_ban_add.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_ban_remove.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_create.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_delete.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_emojis_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_integrations_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_join_request_delete.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_member_add.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_member_remove.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_member_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_members_chunk.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_role_create.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_role_delete.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_role_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_scheduled_event_create.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_scheduled_event_delete.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_scheduled_event_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_scheduled_event_user_add.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_scheduled_event_user_remove.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_stickers_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\integration_create.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\integration_delete.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\integration_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\interaction_create.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\invite_create.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\invite_delete.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\logger.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_create.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_delete.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_delete_bulk.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_reaction_add.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_reaction_remove.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_reaction_remove_all.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_reaction_remove_emoji.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\presence_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\ready.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\resumed.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\stage_instance_create.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\stage_instance_delete.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\stage_instance_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\thread_create.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\thread_delete.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\thread_list_sync.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\thread_member_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\thread_members_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\thread_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\typing_start.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\user_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\voice_server_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\voice_state_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\webhooks_update.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\format.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\guild.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/guild.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\httpsclient.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\integration.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\invite.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/invite.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\managed.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\message.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/message.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\os.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\permissions.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\presence.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\prune.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\queues.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\role.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/role.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\scheduled_event.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/scheduled_event.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\slashcommand.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\sslclient.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\stage_instance.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/stage_instance.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\user.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/user.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\utility.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\voiceregion.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\voicestate.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\webhook.cpp">
+      <ObjectFileName>$(IntDir)/src/dpp/webhook.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\wsclient.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\dpp.dir\Debug\cmake_pch.hxx" />
+    <ClInclude Include="C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\dpp.dir\Release\cmake_pch.hxx" />
+    <ClInclude Include="C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\dpp.dir\MinSizeRel\cmake_pch.hxx" />
+    <ClInclude Include="C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\dpp.dir\RelWithDebInfo\cmake_pch.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\development\cpp\harmony\libs\ZERO_CHECK.vcxproj">
+      <Project>{13CBF77F-7B06-3CA8-8762-35111AA564DE}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

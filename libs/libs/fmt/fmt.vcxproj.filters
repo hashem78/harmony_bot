@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\development\cpp\harmony\libs\fmt\src\format.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\fmt\src\os.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\development\cpp\harmony\libs\fmt\include\fmt\args.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\fmt\include\fmt\chrono.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\fmt\include\fmt\color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\fmt\include\fmt\compile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\fmt\include\fmt\core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\fmt\include\fmt\format.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\fmt\include\fmt\format-inl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\fmt\include\fmt\os.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\fmt\include\fmt\ostream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\fmt\include\fmt\printf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\fmt\include\fmt\ranges.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\fmt\include\fmt\std.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\fmt\include\fmt\xchar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\development\cpp\harmony\libs\fmt\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\development\cpp\harmony\libs\fmt\README.rst" />
+    <None Include="C:\development\cpp\harmony\libs\fmt\ChangeLog.rst" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A775A97F-FB58-3A77-A53F-F60F8E5DDF87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B86EC91C-508B-3C04-A9DB-36FF460ABD11}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

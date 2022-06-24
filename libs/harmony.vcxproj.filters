@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\development\cpp\harmony\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\development\cpp\harmony\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="C:\development\cpp\harmony\libs\nlohmann\json\nlohmann_json.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B86EC91C-508B-3C04-A9DB-36FF460ABD11}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

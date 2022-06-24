@@ -1,0 +1,17 @@
+C:/development/cpp/harmony/libs/CMakeFiles/harmony.dir
+C:/development/cpp/harmony/libs/CMakeFiles/PACKAGE.dir
+C:/development/cpp/harmony/libs/CMakeFiles/INSTALL.dir
+C:/development/cpp/harmony/libs/CMakeFiles/ALL_BUILD.dir
+C:/development/cpp/harmony/libs/CMakeFiles/ZERO_CHECK.dir
+C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/dpp.dir
+C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/unittest.dir
+C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/PACKAGE.dir
+C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/INSTALL.dir
+C:/development/cpp/harmony/libs/libs/DPP/CMakeFiles/ALL_BUILD.dir
+C:/development/cpp/harmony/libs/libs/fmt/CMakeFiles/fmt.dir
+C:/development/cpp/harmony/libs/libs/fmt/CMakeFiles/PACKAGE.dir
+C:/development/cpp/harmony/libs/libs/fmt/CMakeFiles/INSTALL.dir
+C:/development/cpp/harmony/libs/libs/fmt/CMakeFiles/ALL_BUILD.dir
+C:/development/cpp/harmony/libs/libs/nlohmann/json/CMakeFiles/PACKAGE.dir
+C:/development/cpp/harmony/libs/libs/nlohmann/json/CMakeFiles/INSTALL.dir
+C:/development/cpp/harmony/libs/libs/nlohmann/json/CMakeFiles/ALL_BUILD.dir

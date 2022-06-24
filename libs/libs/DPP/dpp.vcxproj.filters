@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\dpp.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\auditlog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\automod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\ban.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\channel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\appcommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\automod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\channel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\confirmation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\dm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\emoji.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\gateway.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\guild.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\guild_member.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\invite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\json_interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\message.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\role.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\scheduled_event.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\stage_instance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\sticker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\template.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\thread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\user.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\voice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster\webhook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\cluster_sync_calls.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\commandhandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\discordclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\discordevents.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\discordvoiceclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\dispatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\dtemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\emoji.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\etf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\automod_rule_create.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\automod_rule_delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\automod_rule_execute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\automod_rule_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\channel_create.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\channel_delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\channel_pins_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\channel_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_ban_add.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_ban_remove.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_create.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_emojis_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_integrations_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_join_request_delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_member_add.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_member_remove.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_member_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_members_chunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_role_create.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_role_delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_role_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_scheduled_event_create.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_scheduled_event_delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_scheduled_event_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_scheduled_event_user_add.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_scheduled_event_user_remove.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_stickers_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\guild_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\integration_create.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\integration_delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\integration_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\interaction_create.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\invite_create.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\invite_delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_create.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_delete_bulk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_reaction_add.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_reaction_remove.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_reaction_remove_all.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_reaction_remove_emoji.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\message_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\presence_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\ready.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\resumed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\stage_instance_create.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\stage_instance_delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\stage_instance_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\thread_create.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\thread_delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\thread_list_sync.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\thread_member_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\thread_members_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\thread_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\typing_start.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\user_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\voice_server_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\voice_state_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\events\webhooks_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\format.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\guild.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\httpsclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\integration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\invite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\managed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\message.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\os.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\permissions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\presence.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\prune.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\queues.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\role.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\scheduled_event.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\slashcommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\sslclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\stage_instance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\user.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\voiceregion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\voicestate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\webhook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\development\cpp\harmony\libs\DPP\src\dpp\wsclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\dpp.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\dpp.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\dpp.dir\MinSizeRel\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\development\cpp\harmony\libs\libs\DPP\CMakeFiles\dpp.dir\RelWithDebInfo\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\development\cpp\harmony\libs\DPP\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{541A5B98-7C37-312E-BA94-2B6F60BD7CD2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B86EC91C-508B-3C04-A9DB-36FF460ABD11}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

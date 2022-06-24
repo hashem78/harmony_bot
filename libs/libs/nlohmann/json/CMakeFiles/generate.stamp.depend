@@ -1,0 +1,9 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/ExternalProject.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake
+C:/development/cpp/harmony/libs/nlohmann/json/CMakeLists.txt
+C:/development/cpp/harmony/libs/nlohmann/json/cmake/config.cmake.in
+C:/development/cpp/harmony/libs/nlohmann/json/cmake/nlohmann_jsonConfigVersion.cmake.in
+C:/development/cpp/harmony/libs/nlohmann/json/cmake/pkg-config.pc.in

@@ -1,0 +1,26 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+C:/Program Files/CMake/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/CPack.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/CPackComponent.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/CheckCXXSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindGit.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake
+C:/Program Files/CMake/share/cmake-3.23/Templates/CPackConfig.cmake.in
+C:/development/cpp/harmony/libs/DPP/CMakeLists.txt
+C:/development/cpp/harmony/libs/DPP/cmake/CPackSetup.cmake
+C:/development/cpp/harmony/libs/DPP/cmake/colour.cmake
+C:/development/cpp/harmony/libs/DPP/win32/bin/libcrypto-1_1-x64.dll
+C:/development/cpp/harmony/libs/DPP/win32/bin/libsodium.dll
+C:/development/cpp/harmony/libs/DPP/win32/bin/libssl-1_1-x64.dll
+C:/development/cpp/harmony/libs/DPP/win32/bin/opus.dll
+C:/development/cpp/harmony/libs/DPP/win32/bin/zlib1.dll
