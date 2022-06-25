@@ -3,6 +3,7 @@
 #include <nlohmann/json.hpp>
 #include <fmt/core.h>
 #include <fstream>
+#include <filesystem>
 #include <string_view>
 #include <string>
 #include <ranges>
@@ -22,7 +23,7 @@ using std::cout;
 using std::endl;
 using std::shared_ptr;
 using std::string;
-
+namespace fs = std::filesystem;
 
 namespace harmony
 {
@@ -59,12 +60,9 @@ namespace harmony
 
         optional_context find_context_for(guild_id gid, channel_id cid)
         {
-            
             if (indexing_contexts.contains({gid, cid}))
-            {
-
                 return indexing_contexts[{gid, cid}];
-            }
+            
             return std::nullopt;
         }
 
@@ -73,6 +71,7 @@ namespace harmony
             std::atomic_bool should_end;
             guild_id _gid;
             channel_id _cid;
+
             dpp::cluster &_bot;
 
             IndexingContext(guild_id gid, channel_id cid, dpp::cluster &bot) : _bot(bot)
@@ -98,30 +97,58 @@ namespace harmony
             {
                 should_end = true;
                 indexing_contexts.erase({_gid, _cid});
+                
                 fmt::print("Indexing context stopped");
             }
             void start_indexing()
             {
-                fmt::print("Indexing context started");
 
                 indexer indexing_handler = [this]()
                 {
                     dpp::snowflake after = 1420070400000;
+                    auto guild = _bot.guild_get_sync(_gid);
+					auto channel = _bot.channel_get_sync(_cid);
+                    
+					fmt::print("Indexing context started in {} -> {}", guild.name, channel.name);
+                    
+
+                    auto path = fmt::format("{}/{}", guild.name, channel.name);
+					if (not fs::exists(path)) {
+                        fs::create_directories(path);
+                    }
+                    int file_counter = 0;
+                    auto output = std::ofstream();
+
                     while (!should_end)
                     {
                         auto messages = _bot.messages_get_sync(_cid, 0, 0, after, 100);
-                        fmt::print("messages length: {}\n", messages.size());
+                        
                         if (messages.empty())
                         {
                             stop_indexing();
+                            
                             break;
                         }
-                        dpp::message *last_message = &messages.begin()->second;
+                        output.open(fmt::format("{}/{}.json", path, file_counter++));
+
+                        if (not output.is_open()) {
+                            fmt::print("Failed to open {}/{}.json for writing, stopping index", path, file_counter - 1);
+                            stop_indexing();
+                            break;
+                        }
+
+                        auto messages_json_array = json::array();
+                        
+                        auto *last_message = &messages.begin()->second;
 
                         for (auto &[message_id, message] : messages)
                         {
                             if (not message.author.is_bot())
                             {
+                                auto parsed_message_json = json::parse(message.build_json());
+                                
+                                messages_json_array.push_back(parsed_message_json);
+
                                 fmt::print("message: {}\n", message.content);
                             }
 
@@ -131,6 +158,11 @@ namespace harmony
                             }
                         }
                         after = last_message->id;
+
+                        output << std::setw(4) << messages_json_array;
+						fmt::print("Saved {}/{}.json", path, file_counter - 1);
+                        output.close();
+                        std::this_thread::sleep_for(std::chrono::seconds(1));
                     }
                 };
                 std::thread(indexing_handler).detach();
@@ -163,28 +195,21 @@ namespace harmony
             slash::handlers["start_indexing_channel"] = [&bot](const dpp::slashcommand_t &event)
             {
                 auto channel_id = get<dpp::snowflake>(event.get_parameter("channel"));
-                auto channel = bot.channel_get_sync(channel_id);
                 auto guild_id = event.command.guild_id;
                 indexing::IndexingContext::create(guild_id, channel_id, bot);
-
-                event.reply(fmt::format("Starting indexer for {}...", channel.name));
+                event.reply("Starting indexer");
             };
             slash::handlers["stop_indexing_channel"] = [&bot](const dpp::slashcommand_t &event)
             {
                 auto channel_id = get<dpp::snowflake>(event.get_parameter("channel"));
-                auto channel = bot.channel_get_sync(channel_id);
+                
                 auto guild_id = event.command.guild_id;
                 auto context_optional = indexing::find_context_for(guild_id, channel_id);
-                if (context_optional.has_value())
-                {
-                    context_optional.value()->stop_indexing();
-                }
-                else
-                {
-                    event.reply(fmt::format("There is no indexer running for {}", channel.name));
+                if (!context_optional.has_value()) {
+                    event.reply("There is no indexer running here");
                     return;
                 }
-                event.reply(fmt::format("Stopped indexing{}", channel.name));
+				context_optional.value()->stop_indexing();
             };
             for (auto &command : slash::commands)
                 command.set_application_id(bot.me.id);
