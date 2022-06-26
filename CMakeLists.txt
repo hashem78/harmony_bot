@@ -13,9 +13,10 @@ src/include/harmony_config.hpp)
 add_subdirectory(libs/DPP)
 add_subdirectory(libs/fmt)
 add_subdirectory(libs/nlohmann/json)
+add_subdirectory(libs/re2)
 
 target_link_libraries(harmony dpp)
-message("-- Using fmt header only mode")
+target_link_libraries(harmony re2)
 target_link_libraries(harmony fmt::fmt-header-only)
 target_link_libraries(harmony nlohmann_json::nlohmann_json)
 

@@ -19,7 +19,7 @@ namespace harmony {
                 get<dpp::snowflake>(event.get_parameter("channel"));
             auto guild_id = event.command.guild_id;
             indexing::IndexingContext::create(guild_id, channel_id, bot);
-            event.reply("Starting indexer");
+            event.reply("Indexing Started");
           };
 
       slash::handlers["stop_indexing_channel"] =
@@ -34,6 +34,7 @@ namespace harmony {
               event.reply("There is no indexer running here");
               return;
             }
+            event.reply("Indexing stopped");
             context_optional.value()->stop_indexing();
           };
 
