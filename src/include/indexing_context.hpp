@@ -24,8 +24,8 @@ namespace harmony {
 
     class IndexingContext {
       std::atomic_bool should_end;
-      guild_id _gid;
-      channel_id _cid;
+      const guild_id _gid;
+      const channel_id _cid;
       dpp::cluster &_bot;
       static indexer_map indexing_contexts;
 
