@@ -27,13 +27,14 @@ namespace harmony {
       const guild_id _gid;
       const channel_id _cid;
       dpp::cluster &_bot;
+      const dpp::snowflake _start_after;
       static indexer_map indexing_contexts;
 
-      IndexingContext(guild_id gid, channel_id cid, dpp::cluster &bot);
+      IndexingContext(guild_id gid, channel_id cid, dpp::cluster &bot, dpp::snowflake = 1420070400000);
 
      public:
       static optional_context find_context_for(guild_id gid, channel_id cid);
-      static optional_context create(guild_id gid, channel_id cid, dpp::cluster &bot);
+      static optional_context create(guild_id gid, channel_id cid, dpp::cluster &bot, dpp::snowflake = 1420070400000);
 
       bool is_indexer_running() const;
       void start_indexing();

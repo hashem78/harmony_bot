@@ -5,10 +5,9 @@ namespace harmony {
   namespace indexing {
     indexer_map IndexingContext::indexing_contexts;
     IndexingContext::IndexingContext(guild_id gid, channel_id cid,
-                                     dpp::cluster &bot)
-        : _bot(bot) {
-      _gid = gid;
-      _cid = cid;
+                                     dpp::cluster &bot, dpp::snowflake start_after)
+        : _bot(bot), _gid(gid), _cid(cid), _start_after(start_after) {
+      
       should_end = false;
       start_indexing();
     }
@@ -22,9 +21,9 @@ namespace harmony {
     }
 
     optional_context IndexingContext::create(guild_id gid, channel_id cid,
-                                             dpp::cluster &bot) {
+                                             dpp::cluster &bot, dpp::snowflake start_after) {
       indexing_contexts[{gid, cid}] =
-          std::shared_ptr<IndexingContext>(new IndexingContext(gid, cid, bot));
+          std::shared_ptr<IndexingContext>(new IndexingContext(gid, cid, bot, start_after));
       return indexing_contexts[{gid, cid}];
     }
 
@@ -32,7 +31,7 @@ namespace harmony {
 
     void IndexingContext::start_indexing() {
       indexer indexing_handler = [this]() {
-        dpp::snowflake after = 1420070400000;
+        dpp::snowflake after = _start_after;
         auto guild = _bot.guild_get_sync(_gid);
         auto channel = _bot.channel_get_sync(_cid);
 
@@ -57,7 +56,7 @@ namespace harmony {
           output.open(fmt::format("{}/{}.json", path, file_counter++));
 
           if (not output.is_open()) {
-            fmt::print("Failed to open {}/{}.json for writing, stopping index",
+            fmt::print("Failed to open {}/{}.json for writing, stopping index\n",
                        path, file_counter - 1);
             stop_indexing();
             break;
@@ -84,7 +83,7 @@ namespace harmony {
           after = last_message->id;
 
           output << std::setw(4) << messages_json_array;
-          fmt::print("Saved {}/{}.json", path, file_counter - 1);
+          fmt::print("Saved {}/{}.json\n", path, file_counter - 1);
           output.close();
           std::this_thread::sleep_for(std::chrono::seconds(1));
         }
@@ -95,7 +94,7 @@ namespace harmony {
     void IndexingContext::stop_indexing() {
       should_end = true;
       indexing_contexts.erase({_gid, _cid});
-      fmt::print("Indexing context stopped");
+      fmt::print("Indexing context stopped\n");
     }
 
     IndexingContext::~IndexingContext() {}

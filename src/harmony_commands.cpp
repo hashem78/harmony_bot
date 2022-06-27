@@ -3,26 +3,100 @@ namespace harmony {
   namespace commands {
     namespace slash {
       commands_array commands{
-          dpp::slashcommand("start_indexing_channel", "Start Indexing a channel", 0)
+          dpp::slashcommand("index", "Start Indexing a channel", 0)
+              .add_option(dpp::command_option(dpp::command_option_type::co_channel, "channel", "Channel", true)
+                              .add_channel_type(dpp::channel_type::CHANNEL_TEXT))
+              .add_option(dpp::command_option(dpp::co_string, "from", "Start indexing from this point", false)),
+
+          dpp::slashcommand("stop_indexing", "Stop Indexing a channel", 0)
               .add_option(dpp::command_option(dpp::command_option_type::co_channel, "channel", "Channel", true)
                               .add_channel_type(dpp::channel_type::CHANNEL_TEXT)),
+      };
+    };  // namespace slash
+    const re2::RE2 time_range_exp(R"((\d+[ymd])?(\d+[ymd])?(\d+[ymd])?)");
 
-          dpp::slashcommand("stop_indexing_channel", "Stop Indexing a channel", 0)
-              .add_option(dpp::command_option(dpp::command_option_type::co_channel, "channel", "Channel", true)
-                              .add_channel_type(dpp::channel_type::CHANNEL_TEXT))};
-    };
+    optional_time_jump_map parse_jump_time(const std::string &input) {
+      const auto valid_endings = std::string("ymd");
+      const auto time_range_exp = re2::RE2(R"((\s*\d+\s*[ymdYMD])\s*)");
+
+      auto parsing_result = std::map<char, size_t>{{'y', 0}, {'m', 0}, {'d', 0}};
+      auto to_be_matched = re2::StringPiece{input};
+      auto token = std::string{};
+      auto sucess = bool{false};
+
+      // Iterate over matching tokens.
+      while (RE2::Consume(&to_be_matched, time_range_exp, &token)) {
+        // get the token's ending and normalize it
+        auto token_ending = std::tolower(token.back());
+
+        // check the end of the token for the identifier
+        if (valid_endings.find(token_ending) != std::string::npos) {
+          // take the number preceeding the ending
+          auto parsed_number_str = token.substr(0, token.size() - 1);
+
+          // Avoid the possiblity of having to use std::stoi with a large string
+          if (parsed_number_str.length() <= 2) {
+            parsing_result[token_ending] = std::stoi(parsed_number_str);
+            sucess = true;
+          }
+        }
+      }
+
+      if (sucess)
+        return parsing_result;
+
+      return std::nullopt;
+    }
 
     void init_harmony(dpp::cluster &bot) {
-      slash::handlers["start_indexing_channel"] =
+      slash::handlers["index"] =
           [&bot](const dpp::slashcommand_t &event) {
-            auto channel_id =
-                get<dpp::snowflake>(event.get_parameter("channel"));
+            auto channel_id = std::get<dpp::snowflake>(event.get_parameter("channel"));
             auto guild_id = event.command.guild_id;
-            indexing::IndexingContext::create(guild_id, channel_id, bot);
-            event.reply("Indexing Started");
+            // Check if there is an indexer already running
+            if (harmony::indexing::IndexingContext::find_context_for(guild_id, channel_id) != std::nullopt) {
+              event.reply("There is an Indexer already running in this channel");
+
+            } else if (auto from_string = std::get_if<std::string>(&event.get_parameter("from"))) {
+              fmt::print("from: {}\n", *from_string);
+
+              if (auto jump_time = parse_jump_time(*from_string)) {
+                // This will never throw because parse_jump_time initializes the values to 0
+                size_t y = jump_time->at('y');
+                size_t m = jump_time->at('m');
+                size_t d = jump_time->at('d');
+
+                // Get the timestamp based on the id of the command
+                // https://discord.com/developers/docs/reference#snowflakes-snowflake-id-format-structure-left-to-right
+                auto command_time = (event.command.id >> 22) + 1420070400000;
+                // Convert everything to std::chrono::milliseconds
+                auto command_time_ms = std::chrono::milliseconds(command_time);
+                auto years_ms = std::chrono::milliseconds(std::chrono::years(y));
+                auto months_ms = std::chrono::milliseconds(std::chrono::months(m));
+                auto days_ms = std::chrono::milliseconds(std::chrono::days(d));
+
+                // Findout from when the user wants the indexing to start from
+                auto jump_start_time = command_time_ms - (years_ms + months_ms + days_ms);
+
+                // Convert the time point to a discord snowflake
+                // https://discord.com/developers/docs/reference#snowflake-ids-in-pagination-generating-a-snowflake-id-from-a-timestamp-example
+                auto jump_start_time_flake = dpp::snowflake((jump_start_time.count() - 1420070400000) << 22);
+
+                indexing::IndexingContext::create(guild_id, channel_id, bot, jump_start_time_flake);
+
+                event.reply(fmt::format("Indexing Started from <t:{}:F>", jump_start_time.count() / 1000));
+
+              } else {
+                fmt::print("Failed to parse command");
+                event.reply("Failed to parse command");
+              }
+            } else {
+              indexing::IndexingContext::create(guild_id, channel_id, bot);
+              event.reply("Indexing Started ");
+            }
           };
 
-      slash::handlers["stop_indexing_channel"] =
+      slash::handlers["stop_indexing"] =
           [&bot](const dpp::slashcommand_t &event) {
             auto channel_id =
                 get<dpp::snowflake>(event.get_parameter("channel"));
