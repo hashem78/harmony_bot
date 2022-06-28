@@ -3,34 +3,29 @@
 namespace harmony {
   namespace fs = std::filesystem;
   namespace indexing {
-    indexer_map IndexingContext::indexing_contexts;
-    IndexingContext::IndexingContext(guild_id gid, channel_id cid,
-                                     dpp::cluster &bot, dpp::snowflake start_after)
-        : _bot(bot), _gid(gid), _cid(cid), _start_after(start_after) {
-      
-      should_end = false;
-      start_indexing();
-    }
-
-    optional_context IndexingContext::find_context_for(guild_id gid,
-                                                       channel_id cid) {
+    indexer_map indexing_contexts;
+    optional_context find_context_for(guild_id gid, channel_id cid) {
       if (indexing_contexts.contains({gid, cid}))
         return indexing_contexts[{gid, cid}];
 
       return std::nullopt;
     }
 
-    optional_context IndexingContext::create(guild_id gid, channel_id cid,
-                                             dpp::cluster &bot, dpp::snowflake start_after) {
-      indexing_contexts[{gid, cid}] =
-          std::shared_ptr<IndexingContext>(new IndexingContext(gid, cid, bot, start_after));
-      return indexing_contexts[{gid, cid}];
+    IndexingContext::IndexingContext(guild_id gid, channel_id cid, dpp::cluster &bot, dpp::snowflake start_after)
+        : _bot(bot), _gid(gid), _cid(cid), _start_after(start_after), execution_thread() {
+      start_indexing();
     }
 
-    bool IndexingContext::is_indexer_running() const { return should_end; }
+    void IndexingContext::create(guild_id gid, channel_id cid, dpp::cluster &bot, dpp::snowflake start_after) {
+      indexing_contexts[{gid, cid}] = managed_indexing_context(new IndexingContext(gid, cid, bot, start_after));
+    }
+
+    bool IndexingContext::is_indexer_running() const {
+      return execution_thread.get_stop_token().stop_requested();
+    }
 
     void IndexingContext::start_indexing() {
-      indexer indexing_handler = [this]() {
+      auto indexing_func = [this](std::stop_token stoken) {
         dpp::snowflake after = _start_after;
         auto guild = _bot.guild_get_sync(_gid);
         auto channel = _bot.channel_get_sync(_cid);
@@ -45,7 +40,7 @@ namespace harmony {
         int file_counter = 0;
         auto output = std::ofstream();
 
-        while (!should_end) {
+        while (!stoken.stop_requested()) {
           auto messages = _bot.messages_get_sync(_cid, 0, 0, after, 100);
 
           if (messages.empty()) {
@@ -88,12 +83,12 @@ namespace harmony {
           std::this_thread::sleep_for(std::chrono::seconds(1));
         }
       };
-      std::thread(indexing_handler).detach();
+
+      execution_thread = std::jthread(indexing_func);
     }
 
     void IndexingContext::stop_indexing() {
-      should_end = true;
-      indexing_contexts.erase({_gid, _cid});
+      execution_thread.request_stop();
       fmt::print("Indexing context stopped\n");
     }
 

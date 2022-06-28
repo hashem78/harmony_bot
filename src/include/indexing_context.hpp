@@ -16,29 +16,29 @@ namespace harmony {
     class IndexingContext;
     using guild_id = dpp::snowflake;
     using channel_id = dpp::snowflake;
-    using indexer = std::function<void()>;
-    using indexers = std::vector<indexer>;
     using indexer_map_key = std::pair<guild_id, channel_id>;
-    using optional_context = std::optional<std::shared_ptr<IndexingContext>>;
-    using indexer_map = std::map<indexer_map_key, optional_context>;
+    using managed_indexing_context = std::shared_ptr<IndexingContext>;
+    using indexer_map = std::map<indexer_map_key, managed_indexing_context>;
+    using optional_context = std::optional<managed_indexing_context>;
+    extern indexer_map indexing_contexts;
+    extern optional_context find_context_for(guild_id gid, channel_id cid);
 
     class IndexingContext {
-      std::atomic_bool should_end;
       const guild_id _gid;
       const channel_id _cid;
       dpp::cluster &_bot;
       const dpp::snowflake _start_after;
-      static indexer_map indexing_contexts;
+      std::jthread execution_thread;
 
       IndexingContext(guild_id gid, channel_id cid, dpp::cluster &bot, dpp::snowflake = 1420070400000);
 
      public:
-      static optional_context find_context_for(guild_id gid, channel_id cid);
-      static optional_context create(guild_id gid, channel_id cid, dpp::cluster &bot, dpp::snowflake = 1420070400000);
+      static void create(guild_id gid, channel_id cid, dpp::cluster &bot, dpp::snowflake = 1420070400000);
 
       bool is_indexer_running() const;
       void start_indexing();
       void stop_indexing();
+
       ~IndexingContext();
     };
   };  // namespace indexing
