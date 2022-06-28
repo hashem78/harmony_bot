@@ -30,7 +30,7 @@ namespace harmony {
         auto guild = _bot.guild_get_sync(_gid);
         auto channel = _bot.channel_get_sync(_cid);
 
-        fmt::print("Indexing context started in {} -> {}", guild.name,
+        fmt::print("Indexing context started in {} -> {}\n", guild.name,
                    channel.name);
 
         auto path = fmt::format("{}/{}", guild.name, channel.name);
