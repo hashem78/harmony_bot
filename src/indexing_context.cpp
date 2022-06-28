@@ -11,13 +11,13 @@ namespace harmony {
       return std::nullopt;
     }
 
-    IndexingContext::IndexingContext(guild_id gid, channel_id cid, dpp::cluster &bot, bool allow_bot_messages, dpp::snowflake start_after)
-        : _bot(bot), _gid(gid), _cid(cid), _start_after(start_after), _allow_bot_messages(allow_bot_messages), execution_thread() {
+    IndexingContext::IndexingContext(guild_id gid, channel_id cid, dpp::cluster &bot, bool include_bot_messages, dpp::snowflake start_after)
+        : _bot(bot), _gid(gid), _cid(cid), _start_after(start_after), _include_bot_messages(include_bot_messages), execution_thread() {
       start_indexing();
     }
 
-    void IndexingContext::create(guild_id gid, channel_id cid, dpp::cluster &bot, bool allow_bot_messages, dpp::snowflake start_after) {
-      indexing_contexts[{gid, cid}] = managed_indexing_context(new IndexingContext(gid, cid, bot, allow_bot_messages, start_after));
+    void IndexingContext::create(guild_id gid, channel_id cid, dpp::cluster &bot, bool include_bot_messages, dpp::snowflake start_after) {
+      indexing_contexts[{gid, cid}] = managed_indexing_context(new IndexingContext(gid, cid, bot, include_bot_messages, start_after));
     }
 
     bool IndexingContext::is_indexer_running() const {
@@ -66,7 +66,7 @@ namespace harmony {
           for (auto &[message_id, message] : messages) {
             auto parsed_message_json = json::parse(message.build_json());
 
-            if (message.author.is_bot() && _allow_bot_messages) {
+            if (message.author.is_bot() && _include_bot_messages) {
               messages_json_array.push_back(parsed_message_json);
               fmt::print("bot message: {}\n", message.content);
             } else if (!message.author.is_bot()) {
