@@ -6,7 +6,8 @@ namespace harmony {
           dpp::slashcommand("index", "Start Indexing a channel", 0)
               .add_option(dpp::command_option(dpp::command_option_type::co_channel, "channel", "Channel", true)
                               .add_channel_type(dpp::channel_type::CHANNEL_TEXT))
-              .add_option(dpp::command_option(dpp::co_string, "from", "Start indexing from this point", false)),
+              .add_option(dpp::command_option(dpp::co_string, "from", "Start indexing from this point", false))
+              .add_option(dpp::command_option(dpp::co_boolean, "include_bot_messages", "Include bot messages(defaults to false)", false)),
 
           dpp::slashcommand("stop_indexing", "Stop Indexing a channel", 0)
               .add_option(dpp::command_option(dpp::command_option_type::co_channel, "channel", "Channel", true)
@@ -53,6 +54,11 @@ namespace harmony {
           [&bot](const dpp::slashcommand_t &event) {
             auto channel_id = std::get<dpp::snowflake>(event.get_parameter("channel"));
             auto guild_id = event.command.guild_id;
+            auto include_bot_messages{false};
+
+            if (auto should_include_bot_messages = std::get_if<bool>(&event.get_parameter("include_bot_messages"))) {
+              include_bot_messages = *should_include_bot_messages;
+            }
             // Check if there is an indexer already running
             if (harmony::indexing::find_context_for(guild_id, channel_id) != std::nullopt) {
               event.reply("There is an Indexer already running in this channel");
@@ -82,7 +88,7 @@ namespace harmony {
                 // https://discord.com/developers/docs/reference#snowflake-ids-in-pagination-generating-a-snowflake-id-from-a-timestamp-example
                 auto jump_start_time_flake = dpp::snowflake((jump_start_time.count() - 1420070400000) << 22);
 
-                indexing::IndexingContext::create(guild_id, channel_id, bot, jump_start_time_flake);
+                indexing::IndexingContext::create(guild_id, channel_id, bot, include_bot_messages, jump_start_time_flake);
 
                 event.reply(fmt::format("Indexing Started from <t:{}:F>", jump_start_time.count() / 1000));
 
@@ -91,7 +97,7 @@ namespace harmony {
                 event.reply("Failed to parse command");
               }
             } else {
-              indexing::IndexingContext::create(guild_id, channel_id, bot);
+              indexing::IndexingContext::create(guild_id, channel_id, bot, include_bot_messages);
               event.reply("Indexing Started ");
             }
           };
