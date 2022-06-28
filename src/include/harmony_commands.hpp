@@ -6,7 +6,7 @@
 #include <string>
 
 #include "dpp/dpp.h"
-#include "include/indexing_context.hpp"
+#include "indexing_context.hpp"
 #include "re2/re2.h"
 namespace harmony {
   namespace commands {
