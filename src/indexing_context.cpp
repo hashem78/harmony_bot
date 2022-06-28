@@ -45,9 +45,11 @@ namespace harmony {
 
           if (messages.empty()) {
             stop_indexing();
-
+            // remove the context from indexing_contexts
+            indexing::indexing_contexts.erase({_gid, _cid});
             break;
           }
+
           output.open(fmt::format("{}/{}.json", path, file_counter++));
 
           if (not output.is_open()) {
