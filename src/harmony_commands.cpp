@@ -114,11 +114,10 @@ namespace harmony {
       slash::handlers["stop_indexing"] =
           [&bot](const dpp::slashcommand_t &event) {
             auto channel_id = get<dpp::snowflake>(event.get_parameter("channel"));
-
             auto guild_id = event.command.guild_id;
 
-            if (auto context = *indexing::find_context_for(guild_id, channel_id)) {
-              context->stop_indexing();
+            if (auto context = indexing::find_context_for(guild_id, channel_id)) {
+              context.value()->stop_indexing();
               event.reply("Indexing stopped");
 
               // Remove the context from the indexing map
