@@ -1,5 +1,6 @@
 #include "include/harmony_commands.hpp"
 namespace harmony {
+  const auto DISCORD_EPOCH = dpp::snowflake(1420070400000);
   namespace commands {
     namespace slash {
       commands_array commands{
@@ -74,7 +75,7 @@ namespace harmony {
 
                 // Get the timestamp based on the id of the command
                 // https://discord.com/developers/docs/reference#snowflakes-snowflake-id-format-structure-left-to-right
-                auto command_time = (event.command.id >> 22) + 1420070400000;
+                auto command_time = (event.command.id >> 22) + DISCORD_EPOCH;
                 // Convert everything to std::chrono::milliseconds
                 auto command_time_ms = std::chrono::milliseconds(command_time);
                 auto years_ms = std::chrono::milliseconds(std::chrono::years(y));
@@ -86,7 +87,15 @@ namespace harmony {
 
                 // Convert the time point to a discord snowflake
                 // https://discord.com/developers/docs/reference#snowflake-ids-in-pagination-generating-a-snowflake-id-from-a-timestamp-example
-                auto jump_start_time_flake = dpp::snowflake((jump_start_time.count() - 1420070400000) << 22);
+                auto jump_start_time_flake = dpp::snowflake();
+
+                // Make sure we aren't jumping before discord was even a thing.
+                if (jump_start_time.count() < DISCORD_EPOCH) {
+                  jump_start_time_flake = DISCORD_EPOCH;
+                  jump_start_time = std::chrono::milliseconds(DISCORD_EPOCH);
+                } else {
+                  jump_start_time_flake = dpp::snowflake((jump_start_time.count() - DISCORD_EPOCH) << 22);
+                }
 
                 indexing::IndexingContext::create(guild_id, channel_id, bot, include_bot_messages, jump_start_time_flake);
 
