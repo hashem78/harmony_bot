@@ -12,7 +12,7 @@ namespace harmony {
     }
 
     IndexingContext::IndexingContext(guild_id gid, channel_id cid, dpp::cluster &bot, bool include_bot_messages, dpp::snowflake start_after)
-        : _bot(bot), _gid(gid), _cid(cid), _start_after(start_after), _include_bot_messages(include_bot_messages), execution_thread() {
+        : _bot(bot), _gid(gid), _cid(cid), _start_after(start_after), _include_bot_messages(include_bot_messages) {
       start_indexing();
     }
 
@@ -21,7 +21,7 @@ namespace harmony {
     }
 
     bool IndexingContext::is_indexer_running() const {
-      return execution_thread.get_stop_token().stop_requested();
+      return _stop_token.stop_requested();
     }
 
     void IndexingContext::start_indexing() {
@@ -88,14 +88,21 @@ namespace harmony {
         }
       };
 
-      execution_thread = std::jthread(indexing_func);
+      auto thread = std::jthread(indexing_func);
+      _stop_token = thread.get_stop_token();
+      _stopper = thread.get_stop_source();
+      thread.detach();
     }
 
     void IndexingContext::stop_indexing() {
-      execution_thread.request_stop();
-      fmt::print("Indexing context stopped\n");
+      if (_stopper.stop_possible()) {
+        _stopper.request_stop();
+        fmt::print("Indexing context stopped\n");
+      }
     }
 
-    IndexingContext::~IndexingContext() {}
+    IndexingContext::~IndexingContext() {
+      stop_indexing();
+    }
   }  // namespace indexing
 }  // namespace harmony

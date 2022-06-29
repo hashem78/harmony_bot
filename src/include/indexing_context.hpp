@@ -28,8 +28,8 @@ namespace harmony {
       const channel_id _cid;
       dpp::cluster &_bot;
       const dpp::snowflake _start_after;
-      std::jthread execution_thread;
-
+      std::stop_token _stop_token;
+      std::stop_source _stopper;
       const bool _include_bot_messages;
 
       IndexingContext(guild_id gid, channel_id cid, dpp::cluster &bot, bool allow_bot_messages = false, dpp::snowflake = 1420070400000);
