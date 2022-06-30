@@ -18,10 +18,11 @@ namespace harmony {
     class IndexingContext {
       const guild_id _gid;
       const channel_id _cid;
-      dpp::cluster &_bot;
       const dpp::snowflake _start_after;
-      std::jthread indexing_thread;
       const bool _include_bot_messages;
+      
+      dpp::cluster &_bot;
+      std::jthread indexing_thread;
 
       IndexingContext(guild_id gid, channel_id cid, dpp::cluster &bot, bool allow_bot_messages = false, dpp::snowflake = 1420070400000);
 
