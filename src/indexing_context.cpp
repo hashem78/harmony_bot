@@ -46,6 +46,11 @@ namespace harmony {
 
             if (not output.is_open()) {
               fmt::print("Failed to open {}/{}.json for writing, stopping index\n", path, file_counter - 1);
+              _bot.message_create(
+                  dpp::message()
+                      .set_guild_id(_gid)
+                      .set_channel_id(_cid)
+                      .set_content("An unknown error occured."));
               stop_indexing();
             } else {
               auto messages_json_array = nlohmann::json::array();
@@ -82,6 +87,11 @@ namespace harmony {
 
     void IndexingContext::stop_indexing() {
       indexing_thread.request_stop();
+      _bot.message_create(
+          dpp::message()
+              .set_guild_id(_gid)
+              .set_channel_id(_cid)
+              .set_content("Indexing completed."));
       fmt::print("Indexing context stopped\n");
     }
 
