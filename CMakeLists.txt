@@ -4,9 +4,12 @@ project(harmony VERSION 0.1.0)
 add_executable( harmony
 src/main.cpp
 src/harmony_commands.cpp
+src/indexer_map.cpp
 src/indexing_context.cpp
 src/harmony_config.cpp
+src/include/utils.hpp
 src/include/harmony_commands.hpp
+src/include/indexer_map.hpp
 src/include/indexing_context.hpp
 src/include/harmony_config.hpp)
 
