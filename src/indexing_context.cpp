@@ -24,6 +24,9 @@ namespace harmony {
     void IndexingContext::start_indexing() {
       indexing_thread = std::jthread([this](std::stop_token stoken) {
         dpp::snowflake after = _start_after;
+
+        // get the specific channel and guild objects
+        // associated with the event that the context was started for
         auto guild = _bot.guild_get_sync(_gid);
         auto channel = _bot.channel_get_sync(_cid);
 
@@ -36,10 +39,14 @@ namespace harmony {
         int file_counter = 0;
         auto output = std::ofstream();
 
+        // continue to iterate until a stop request comes through.
+        // since the discord api specifies that only a maximum of 100 messages
+        // can be retrieved with a signle api call, so this loops exits when
+        // we can no longer retrieve messages or when a user calls /stop_indexing
         while (!stoken.stop_requested()) {
           auto messages = _bot.messages_get_sync(_cid, 0, 0, after, 100);
 
-          if (messages.empty()) {
+          if (messages.empty()) { // We've reached the most recent message
             stop_indexing();
           } else {
             output.open(fmt::format("{}/{}.json", path, file_counter++));

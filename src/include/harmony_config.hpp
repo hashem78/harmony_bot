@@ -11,6 +11,12 @@
 namespace harmony {
   struct HarmonyConfig;
   using optional_config = std::optional<HarmonyConfig>;
+  /**
+   * @brief The configuration settings for harmony
+   * NOTE: provide a config.json file in the directory
+   * where the executable is present.
+   * 
+   */
   struct HarmonyConfig {
     std::string bot_token;
     static optional_config load_config();
