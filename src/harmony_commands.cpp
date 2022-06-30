@@ -1,6 +1,6 @@
 #include "include/harmony_commands.hpp"
 namespace harmony {
-  const auto DISCORD_EPOCH = dpp::snowflake(1420070400000);
+  constexpr auto DISCORD_EPOCH = 1420070400000;
   namespace commands {
     namespace slash {
       commands_array commands{
