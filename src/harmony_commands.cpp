@@ -61,7 +61,7 @@ namespace harmony {
               include_bot_messages = *should_include_bot_messages;
             }
             // Check if there is an indexer already running
-            if (indexing::indexing_contexts.get({guild_id, channel_id}) != std::nullopt) {
+            if (indexing::indexing_contexts->get({guild_id, channel_id}) != std::nullopt) {
               event.reply("There is an Indexer already running in this channel");
 
             } else if (auto from_string = std::get_if<std::string>(&event.get_parameter("from"))) {
@@ -116,12 +116,12 @@ namespace harmony {
             auto channel_id = get<dpp::snowflake>(event.get_parameter("channel"));
             auto guild_id = event.command.guild_id;
 
-            if (auto context = indexing::indexing_contexts.get({guild_id, channel_id})) {
+            if (auto context = indexing::indexing_contexts->get({guild_id, channel_id})) {
               context.value()->stop_indexing();
               event.reply("Indexing stopped");
 
               // Remove the context from the indexing map
-              indexing::indexing_contexts.erase({guild_id, channel_id});
+              indexing::indexing_contexts->erase({guild_id, channel_id});
             } else {
               event.reply("There is no indexer running here");
             }

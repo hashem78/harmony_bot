@@ -2,7 +2,7 @@
 
 namespace harmony {
   namespace indexing {
-    IndexerMap indexing_contexts;
+    const managed_indexer_map indexing_contexts = managed_indexer_map(new IndexerMap());
     const optional_context IndexerMap::get(const ikey &&key) {
       std::scoped_lock lock(mutex);
       if (indexing_map.contains(key)) {

@@ -14,7 +14,7 @@ namespace harmony {
     }
 
     void IndexingContext::create(guild_id gid, channel_id cid, dpp::cluster &bot, bool include_bot_messages, dpp::snowflake start_after) {
-      indexing_contexts.add({gid, cid}, managed_indexing_context(new IndexingContext(gid, cid, bot, include_bot_messages, start_after)));
+      indexing_contexts->add({gid, cid}, managed_indexing_context(new IndexingContext(gid, cid, bot, include_bot_messages, start_after)));
     }
 
     bool IndexingContext::is_indexer_running() const {

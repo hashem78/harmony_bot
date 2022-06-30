@@ -53,7 +53,8 @@ namespace harmony {
      * for managed_indexing contexts
      *
      */
-    extern IndexerMap indexing_contexts;
+    using managed_indexer_map = std::unique_ptr<IndexerMap>;
+    extern const managed_indexer_map indexing_contexts;
   }  // namespace indexing
 }  // namespace harmony
 
