@@ -25,10 +25,17 @@
 
 /index *<channel_name> ?<start_time> ?<include_bot_messages>
 
+_starts indexing a channel._
+
 * channel_name: the channel where the bot is expected to run on.
 * start_time: syntax -> AyBmCd where ABC are integers, represents how far back the bot has to start indexing from.
 * include_bot_messages: whether or not bot interactions are to be included in the indexed messages.
 
+/stop_indexing *<channel_name>
+
+_stops indexing a channel._
+
+NOTE:
 
 \* : parameter is required <br> ? : parameter is optional
 
